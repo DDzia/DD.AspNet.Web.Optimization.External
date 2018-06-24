@@ -1,0 +1,8 @@
+language: csharp
+solution: DD.AspNet.Web.Optimization.External.sln
+install:
+  - nuget restore DD.AspNet.Web.Optimization.External.sln
+  - nuget install NUnit.ConsoleRunner -Version 3.8.0 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release DD.AspNet.Web.Optimization.External.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.8.0/tools/nunit3-console.exe ./DDAspNetWebOptimizationExternalTest/bin/Release/DDAspNetWebOptimizationExternalTest.dll
