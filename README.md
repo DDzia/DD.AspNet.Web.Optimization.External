@@ -9,7 +9,7 @@ Main point it is a exclude JsMinifier and CssMinifier from Bundle Transforms.
 ```
 using System.Web.Optimization;
 
-namespace RAPMD.Web
+namespace ExternalSample
 {
     /// <summary>
     /// Static front-end content bundles registration.
